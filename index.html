@@ -3,7 +3,8 @@
 	<script src="jquery.js"></script>
    <body id="">
 
-    <button name="aaaa" value="clica aqui" id="aaaa"></button>
+    <button name="bbbb" value="clica aqui" id="aaa"></button>
+    <button name="bbbb" value="clica aqui" id="bbbb">json</button>
 
     <div class="result">
     </div>
@@ -18,6 +19,24 @@
       $( ".result").html(data);
     });
   });
+
+
+
+  $( "bbbb").click(function(){
+    $.getJSON("http://www.franciscoribeiro.net/loc.json" , function(data){
+
+      $.each(data, function( key, val){
+        $( ".resultjson").append('<h1>' + key + '::' + val + '</h1>');
+    
+    
+  });
+        });
+    
+       });
+
+      
+
+
 
 </script>
 
