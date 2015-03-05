@@ -16,36 +16,17 @@
 
   <script>
 
-  $( "#aaaa").click(function() {
-    orig = "http://www.franciscoribeiro.net/localidades.html";
-
-    $.get(orig, function(data) {
-      $( ".result").html(data);
-    });
-  });
-
-
-
-  $( "#bbbb").click(function(){
-    $.getJSON("http://www.franciscoribeiro.net/loc.json" , function(data){
-
-      $.each(data, function( key, val){
-        $( ".resultjson").append('<h1>' + key + '::' + val + '</h1>');
-
-
-
 
     $("#btpessoa").click(function(){
       servidor = "http://www.franciscoribeiro.net/";
-      $.getjson( servidor + "pessoa1.json", function(data){
+      $.getJSON( servidor + "pessoa1.json", function(data){
 
         $("body").append('<div>nome:' + data['nome'] + '</div>');
         $("body").append('<div>nac.:' + data['nacionalidade'] + '</div>');
 
 
       });
-    });
-
+    });    
       
 </script>
 
