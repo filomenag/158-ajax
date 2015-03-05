@@ -1,0 +1,49 @@
+<html>
+
+	<script src="jquery.js"></script>
+   <body id="">
+
+    <button name="bbbb" value="clica aqui" id="aaa"></button>
+    <button name="bbbb" value="clica aqui" id="bbbb">json</button>
+    <button name="btpessoa" id="btpessoa">pessoa</button>
+
+    <div class="result">
+    </div>
+
+        <div class="resultjson">
+    </div>
+  </body>
+
+  <script>
+
+
+    $("#btpessoa").click(function(){       
+
+
+    servidor = "http://api.flickr.com/services/feeds/photos_public.gne?id=21088294@N00&format=json&jsoncallback=";
+
+
+      $.getJSON( servidor , function(data){
+
+        $("body").append('<div>nome:' + data['nome'] + '</div>');
+        $("body").append('<div>nac.:' + data['nacionalidade'] + '</div>');
+
+
+      });
+    });    
+      
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
